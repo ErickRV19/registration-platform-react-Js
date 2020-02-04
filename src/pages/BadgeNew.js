@@ -13,23 +13,23 @@ class BadgeNew extends React.Component {
         <Navbar />
         <div className="BadgeNew__hero">
           <img className="img-fluid" src={header} alt="Logo" />
-        </div>
+        </div>{" "}
         <div className="container">
           <div className="row">
             <div className="col-6">
               <Badge
                 avatarLogo="https://pbs.twimg.com/profile_images/1175214019860451328/pHGskk0C_400x400.jpg"
+                lastName="R."
                 firtsName="Erick"
-                lastName="R"
                 JobTittle="Frontend Developer"
                 twitter="ErickRV19"
               />
-            </div>
+            </div>{" "}
             <div className="col-6">
               <BadgeForm />
-            </div>
-          </div>
-        </div>
+            </div>{" "}
+          </div>{" "}
+        </div>{" "}
       </div>
     );
   }

@@ -10,7 +10,6 @@ class Badge extends React.Component {
         <div className="Badge__header">
           <img src={confLogo} alt="Logo de la conferencia" />
         </div>
-
         <div className="Badge__section-name">
           <img
             className="Badge__avatar"
@@ -18,17 +17,14 @@ class Badge extends React.Component {
             alt="Avatar"
           />
           <h1>
-            {this.props.lastName} <br />
-            {this.props.firtsName}
-          </h1>
+            {" "}
+            {this.props.firtsName} <br /> {this.props.lastName}{" "}
+          </h1>{" "}
         </div>
-
         <div className="Badge__section-info">
-          <h3> {this.props.jobTittle} </h3>
-          <div>@{this.props.twitter}</div>
+          <h3> {this.props.jobTittle} </h3> <div> @ {this.props.twitter} </div>{" "}
         </div>
-
-        <div className="Badge__footer">#sitioParaLAConferencia</div>
+        <div className="Badge__footer"> #sitioParaLAConferencia </div>{" "}
       </div>
     );
   }
