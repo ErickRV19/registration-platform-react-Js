@@ -1,6 +1,7 @@
 import React from "react";
 import header from "../images/badge-header.svg";
 import Navbar from "../components/Navbar";
+import BadgeForm from "../components/BadgeForm.js";
 import Badge from "../components/Badge";
 
 import "./styles/BadgeNew.css";
@@ -13,18 +14,19 @@ class BadgeNew extends React.Component {
         <div className="BadgeNew__hero">
           <img className="img-fluid" src={header} alt="Logo" />
         </div>
-
         <div className="container">
           <div className="row">
-            <div className="col">
+            <div className="col-6">
               <Badge
                 avatarLogo="https://pbs.twimg.com/profile_images/1175214019860451328/pHGskk0C_400x400.jpg"
                 firtsName="Erick"
-                lastName="Ruiz"
-                JobTittle="Frontend developer"
+                lastName="R"
+                JobTittle="Frontend Developer"
                 twitter="ErickRV19"
               />
-              ,container
+            </div>
+            <div className="col-6">
+              <BadgeForm />
             </div>
           </div>
         </div>
