@@ -12,8 +12,8 @@ ReactDOM.render( <
     /*avatarLogo="https://pbs.twimg.com/profile_images/1175214019860451328/pHGskk0C_400x400.jpg"
       firtsName="Erick"
       lastName="R."
-      JobTittle="Frontend developer"
-      twitter="ErickRV19"*/
+      JobTittle="Frontend Developer"
+      twitter="@ErickRV19"*/
     /
     >
     ,
