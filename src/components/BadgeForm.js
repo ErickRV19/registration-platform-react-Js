@@ -3,9 +3,13 @@ import React from "react";
 class BadgeForm extends React.Component {
   handleChange(e) {
     //leyendo la informacion del label
-    console.log({
+    /*console.log({
       name: e.target.name,
       value: e.target.value
+    });*/
+
+    this.setState({
+      [e.target.name]: e.target.value
     });
   }
 
@@ -23,7 +27,6 @@ class BadgeForm extends React.Component {
     return (
       <div>
         <h1>New Attendant</h1>
-
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
             <label> First Name</label>
@@ -34,7 +37,42 @@ class BadgeForm extends React.Component {
               name="firtsName"
             />
           </div>
-
+          <div className="form-group">
+            <label> Last Name</label>
+            <input
+              onChange={this.handleChange}
+              className="form-control"
+              type="text"
+              name="lastName"
+            />
+          </div>
+          <div className="form-group">
+            <label> Email</label>
+            <input
+              onChange={this.handleChange}
+              className="form-control"
+              type="email"
+              name="email"
+            />
+          </div>
+          <div className="form-group">
+            <label> Job Title</label>
+            <input
+              onChange={this.handleChange}
+              className="form-control"
+              type="text"
+              name="jobTitle"
+            />
+          </div>
+          <div className="form-group">
+            <label> Twitter </label>
+            <input
+              onChange={this.handleChange}
+              className="form-control"
+              type="text"
+              name="twitter"
+            />
+          </div>
           <button onClick={this.handleClick} className="botton btn btn-primary">
             Save
           </button>
