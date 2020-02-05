@@ -2,6 +2,7 @@ import React from "react";
 
 class BadgeForm extends React.Component {
   handleChange(e) {
+    //leyendo la informacion del label
     console.log({
       name: e.target.name,
       value: e.target.value
@@ -9,11 +10,13 @@ class BadgeForm extends React.Component {
   }
 
   handleClick(e) {
+    // click en el boton
     console.log("Botton was clicked");
   }
   handleSubmit(e) {
+    // mandando el submit del fomulario
     e.preventDefault();
-    console.log("form was sumitted");
+    console.log("form was submitted");
   }
 
   render() {
