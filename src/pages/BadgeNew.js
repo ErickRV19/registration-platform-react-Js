@@ -1,13 +1,20 @@
 import React from "react";
-import header from "../images/badge-header.svg";
-import Navbar from "../components/Navbar";
-import BadgeForm from "../components/BadgeForm.js";
-import Badge from "../components/Badge";
 
 import "./styles/BadgeNew.css";
+import header from "../images/badge-header.svg";
+import Badge from "../components/Badge";
+import BadgeForm from "../components/BadgeForm";
 
 class BadgeNew extends React.Component {
-  state = { form: {} };
+  state = {
+    form: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      jobTitle: "",
+      twitter: ""
+    }
+  };
 
   handleChange = e => {
     this.setState({
@@ -20,8 +27,7 @@ class BadgeNew extends React.Component {
 
   render() {
     return (
-      <div>
-        <Navbar />
+      <React.Fragment>
         <div className="BadgeNew__hero">
           <img className="img-fluid" src={header} alt="Logo" />
         </div>
@@ -29,22 +35,23 @@ class BadgeNew extends React.Component {
           <div className="row">
             <div className="col-6">
               <Badge
-                avatarLogo="https://pbs.twimg.com/profile_images/1175214019860451328/pHGskk0C_400x400.jpg"
-                lastName="R."
-                firtsName="Erick"
-                JobTittle="Frontend Developer"
-                twitter="ErickRV19"
+                firstName={this.state.form.firstName}
+                lastName={this.state.form.lastName}
+                twitter={this.state.form.twitter}
+                jobTitle={this.state.form.jobTitle}
+                email={this.state.form.email}
+                avatarUrl="https://pbs.twimg.com/profile_images/1175214019860451328/pHGskk0C_400x400.jpg"
               />
             </div>
             <div className="col-6">
               <BadgeForm
-                onChange={this.handlechange}
+                onChange={this.handleChange}
                 formValues={this.state.form}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+              />{" "}
+            </div>{" "}
+          </div>{" "}
+        </div>{" "}
+      </React.Fragment>
     );
   }
 }
